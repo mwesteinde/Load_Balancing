@@ -11,10 +11,10 @@ public class PowerGridTest {
 		assertTrue(PowerGrid.canLoadBalance(10, 15, 35));
 	}
 
-	/*@Test
+	@Test
 	public void test1a() {
 		assertTrue(PowerGrid.canLoadBalance(10, 15, 35));
-	}*/
+	}
 
 
 	@Test

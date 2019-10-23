@@ -24,8 +24,7 @@ public class PowerGrid {
 
 	public static boolean canLoadBalance(int a, int b, int c) {
 		setOfAllValues = new HashSet<>();
-		boolean sentinel = balance(a, b, c);
-
+		boolean sentinel = balance(a,b,c);
 		return sentinel;
 	}
 
@@ -38,28 +37,28 @@ public class PowerGrid {
 				}
 
 				if (c > a && c > b) {
-						if (canLoadBalance(a, b * 2, c - b)) {
+						if (balance(a, b * 2, c - b)) {
 							return true;
 						}
-						if (canLoadBalance(a * 2, b, c - a)) {
+						if (balance(a * 2, b, c - a)) {
 							return true;
 						}
 				}
 
 				if (a > b && a > c) {
-						if (canLoadBalance(a - b, b * 2, c)) {
+						if (balance(a - b, b * 2, c)) {
 							return true;
 						}
-						if (canLoadBalance(a - c, b, c * 2)) {
+						if (balance(a - c, b, c * 2)) {
 							return true;
 						}
 				}
 
 				if (b > a && b > c) {
-						if (canLoadBalance(a, b - c, c * 2)) {
+						if (balance(a, b - c, c * 2)) {
 							return true;
 						}
-						if (canLoadBalance(a * 2, b - a, c)) {
+						if (balance(a * 2, b - a, c)) {
 							return true;
 						}
 				}
