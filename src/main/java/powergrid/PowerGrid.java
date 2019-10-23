@@ -23,6 +23,13 @@ public class PowerGrid {
 
 
 	public static boolean canLoadBalance(int a, int b, int c) {
+		setOfAllValues = new HashSet<>();
+		boolean sentinel = balance(a, b, c);
+
+		return sentinel;
+	}
+
+	public static boolean balance (int a, int b, int c) {
 			String s = String.valueOf(a) + String.valueOf(b) + String.valueOf(c);
 			if (!setOfAllValues.contains(s)) {
 				setOfAllValues.add(s);
