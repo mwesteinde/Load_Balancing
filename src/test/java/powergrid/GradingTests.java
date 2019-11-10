@@ -4,18 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class PowerGridTest {
+public class GradingTests {
 
 	@Test
 	public void test1() {
 		assertTrue(PowerGrid.canLoadBalance(10, 15, 35));
 	}
-
-	@Test
-	public void test1a() {
-		assertTrue(PowerGrid.canLoadBalance(10, 15, 35));
-	}
-
 
 	@Test
 	public void test2() {
@@ -70,6 +64,21 @@ public class PowerGridTest {
 	@Test
 	public void test12() {
 		assertTrue(PowerGrid.canLoadBalance(2, 6, 16));
+	}
+
+	@Test
+	public void test13() {
+		assertTrue(!PowerGrid.canLoadBalance(2, 15, 19));
+	}
+
+	@Test
+	public void test14() {
+		assertTrue(!PowerGrid.canLoadBalance(16384, 8193, 2));
+	}
+
+	@Test
+	public void test15() {
+		assertTrue(PowerGrid.canLoadBalance(2*536870912-1, 536870912, 1));
 	}
 
 }
